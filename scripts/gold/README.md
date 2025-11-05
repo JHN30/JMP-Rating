@@ -1,0 +1,1 @@
+Right now, there are no gold tables. The data I found was already quite clean, so there wasn’t any need for further modification. I might use this layer in the future for more advanced stats and/or calculations.
