@@ -74,9 +74,3 @@ Features:
 -  **MongoDB**
 -  **Python**  
 
----
-
->  *JMP Rating continues to evolve — future versions will refine JEI, and expand to domestic leagues*
-
----
-
