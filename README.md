@@ -4,7 +4,30 @@
 
 ---
 
-## Rating 2.1 — Unified Euroleague & EuroCup System
+## Rating 2.2
+
+JMP Rating 2.2 currently delivers roughly a **15%** improvement over the previous version of the model. The improvement comes mainly from using better inputs and rebalancing core constants.
+
+The biggest upgrade in JMP Rating 2.2 is the quality of the data being used. Instead of depending too heavily on short-term form, the model now works with a broader and more stable set of signals, including:
+
+- round-by-round points scored
+- round-by-round points allowed
+- pre-round average scoring margin
+- actual game margin for rating updates
+
+Another improvement was rebalancing the home advantage constant to have more weight. At the same time, the old form logic was deleted. While recent form can still be useful, throughout my testing it consistently gave the model worse results.
+
+### NOTE
+
+At the moment of writing this, I have not yet uploaded the main Python script that I used for calculating ratings and testing the model's accuracy. However, a very similar version of the prediction logic used in the main project is already available here:
+
+- [frontend/src/utils/calculateExpectedScore.js](https://github.com/JHN30/JMP-Euroleague/blob/main/frontend/src/utils/calculateExpectedScore.js)
+
+This file reflects the same general direction and logic used in Rating 2.2 for predicting upcoming games.
+
+---
+
+## Rating 2.1
 
 **Rating 2.1** now **includes EuroCup player data**, merging both competitions into a single analytical system.  
 By integrating EuroCup performance into the core JEI (JMP Efficiency Index) calculations, team and player strength estimates now reflect the **true continental landscape** of European basketball.
@@ -17,7 +40,7 @@ Key improvements:
 
 ---
 
-## Rating 2.0 — Precision and Depth Overhaul
+## Rating 2.0
 
 **Rating 2.0** was a major overhaul of the original JMP Rating system — a full redesign focused on **depth, accuracy, and context**.
 
@@ -33,7 +56,7 @@ It introduced:
 
 ---
 
-## Rating 1.0 — The Foundation
+## Rating 1.0
 
 **Rating 1.0** established the core concept behind JMP Rating.  
 It used a **base team rating of 1000** and applied a **modified ELO system** to evolve ratings throughout the season.
@@ -46,10 +69,10 @@ Features:
 ---
 
 ##  Tech Stack & Architecture
-
-- **Backend:** Node.js + Express  
-- **Frontend:** React (MERN stack)  
-- **Database:** SQL Server (ETL + analytics), MongoDB (frontend persistence)  
+  
+-  **SQL Server**
+-  **MongoDB**
+-  **Python**  
 
 ---
 
